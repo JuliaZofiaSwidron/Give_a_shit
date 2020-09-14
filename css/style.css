@@ -16,12 +16,13 @@ body {
     background-image: url(../background/whole_background.svg);
     background-repeat: no-repeat;
     background-size: 100%;
+    overflow-x: hidden;
 }
 
 .logo img {
     transform: rotate(-15deg);
     position: absolute;
-    width: 20vw;
+    width: 18rem;
     height: auto;
     top: -0.7rem;
     left: -1.5rem;
@@ -64,11 +65,14 @@ nav {
     }
 
     .logo img {
-        width: 30vw;
+        width: 40vw;
         left: -1rem;
     }
     nav{
        display: block;
+    }
+    body {
+    overflow-x: hidden;
     }
 
     #menuToggle {
@@ -101,20 +105,18 @@ nav {
         cursor: pointer;
 
         opacity: 0;
-        /* hide this */
+
         z-index: 2;
-        /* and place it over the hamburger */
+
     }
 
-    /*
- * Just a quick hamburger
- */
     #menuToggle span {
         display: block;
         width: 33px;
         height: 4px;
         margin-bottom: 5px;
         position: relative;
+
 
         background: var(--link-hover-color);
         border-radius: 3px;
@@ -136,46 +138,38 @@ nav {
         transform-origin: 0% 100%;
     }
 
-    /*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+
     #menuToggle input:checked ~ span {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
         background: ;
     }
 
-    /*
- * But let's hide the middle one.
- */
+
     #menuToggle input:checked ~ span:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
 
-    /*
- * Ohyeah and the last one should go the other direction
- */
+
     #menuToggle input:checked ~ span:nth-last-child(2) {
         transform: rotate(-45deg) translate(0, -1px);
     }
 
-    /*
- * Make this absolute positioned
- * at the top left of the screen
- */
+
     #menu {
         position: absolute;
         width: 10rem;
-        margin: -100px 0 0 -120px;
+        margin: -100px 0 0 -135px;
         padding: 30px;
         padding-top: 125px;
         font-family: var(--secondary-font);
+        text-align: center;
+        background-color:var(--color-5);
+        border-radius: 5%;
 
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
-        /* to stop flickering of text in safari */
 
         transform-origin: 0% 0%;
         transform: translate(100%, 0);
