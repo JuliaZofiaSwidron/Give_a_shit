@@ -1,3 +1,4 @@
+/*BASIC  DESIGN*/
 :root {
     --bg-color: #e1306f;
     --link-color: #102FAD;
@@ -19,6 +20,13 @@ body {
     overflow-x: hidden;
 }
 
+
+/*NAV DESIGN */
+
+header{
+    z-index: 20;
+}
+
 .logo img {
     transform: rotate(-15deg);
     position: absolute;
@@ -26,6 +34,7 @@ body {
     height: auto;
     top: -0.7rem;
     left: -1.5rem;
+    font-family: var(--primary-font);
 }
 
 .topnav {
@@ -49,6 +58,59 @@ body {
 nav {
     display: none;
 }
+/*MAIN DESIGN*/
+
+
+/*map design*/
+.mapLblue{
+    width: 100%;
+    height: auto;
+}
+.mapLblue:first-child > img{
+    width: 100%;
+}
+
+/*indicator design*/
+.pointer{
+    position: absolute;
+    width: 9vw;
+    height: 5vw;
+    background-image: url(/images/nametag.svg);
+    background-repeat: no-repeat;
+}
+#loca1{
+    left: 22.3vw;
+    top: 34vw;
+}
+#loca2{
+    left: 43.7vw;
+    top: 25vw;
+
+}
+#loca3{
+    left: 76vw;
+    top: 30.2vw;
+
+}
+#loca4{
+    left: 79.8vw;
+    top: 47vw;
+
+}
+/*button design*/
+.mapLblue>button{
+    position: absolute;
+    border-radius: 5vw;
+    left: 7vw;
+    top: 50vw;
+    background-color: var(--link-hover-color);
+    color: white;
+    font-size: 2vw;
+    width: 20vw;
+    height: 5vw;
+}
+
+/*design under 699px*/
 
 
 @media all and (max-width: 699px) {
