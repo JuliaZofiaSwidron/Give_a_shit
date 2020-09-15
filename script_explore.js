@@ -1,0 +1,40 @@
+const link = "https://spreadsheets.google.com/feeds/list/12fl10SBjNqDoDrhy2nTErFCWefzyTrKXfi3rvYMO3QY/od6/public/values?alt=json";
+window.addEventListener("DOMContentLoaded", getData);
+
+function getData(){
+    fetch(link)
+    .then(res => res.json())
+    .then(handleData);
+}
+
+function handleData(data){
+    const myData = data.feed.entry;
+    console.log(myData);
+    myData.forEach(createCity);
+}
+function createCity(city){
+    // link and clone template
+    const template = document.querySelector("#City").content;
+    const clone = template.cloneNode(true);
+
+    //populate the copy
+    clone.querySelector('article').dataset.id=city.gsx$id.$t;
+    clone.querySelector("h1").textContent = city.gsx$city.$t;
+    //counting the totall rating used on a website
+    let bigRating = (( Number(city.gsx$pricerating.$t) + Number(city.gsx$smellrating.$t) + Number(city.gsx$weatherrating.$t) + Number(city.gsx$availabilityrating.$t)) / 4)
+    bigRating = Math.floor(bigRating);
+    console.log(bigRating);
+    clone.querySelector(".total_rating").textContent = bigRating + "/5";
+
+    clone.querySelectorAll('.poop').forEach(e=>{
+        if (bigRating > 0){
+            clone.querySelector('.poop').classList.add('filled_poop');
+            bigRating --;
+        }else{
+            clone.querySelector('.poop').classList.add('empty_poop');
+        }
+    })
+
+
+    document.querySelector("main").appendChild(clone);
+}
