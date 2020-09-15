@@ -20,6 +20,8 @@ function createCity(city){
     //populate the copy
     clone.querySelector('article').dataset.id=city.gsx$id.$t;
     clone.querySelector("h1").textContent = city.gsx$city.$t;
+    clone.querySelector('.linkCity').setAttribute('href',`${city.gsx$city.$t}.html`);
+    // clone.querySelector('')
     //counting the totall rating used on a website
     let bigRating = (( Number(city.gsx$pricerating.$t) + Number(city.gsx$smellrating.$t) + Number(city.gsx$weatherrating.$t) + Number(city.gsx$availabilityrating.$t)) / 4)
     bigRating = Math.floor(bigRating);

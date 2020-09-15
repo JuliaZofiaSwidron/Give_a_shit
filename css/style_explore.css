@@ -72,7 +72,7 @@ div.empty_poop {
     box-shadow: grey 4px 5px 6px;
     border-radius: 2rem;
 }
-.readmore > a {
+.readmore > p {
     color: white;
     padding: 0.6rem;
 }
