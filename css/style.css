@@ -17,6 +17,15 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     overflow-x: hidden;
+    font-family: var(--secondary-font);
+    
+}
+h1 ,h2 ,h3{
+    font-weight: bold;
+    color: var(--link-hover-color);
+}
+p{
+    color: var(--link-hover-color);
 }
 
 .logo img {
