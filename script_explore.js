@@ -26,15 +26,11 @@ function createCity(city){
     console.log(bigRating);
     clone.querySelector(".total_rating").textContent = bigRating + "/5";
 
-    clone.querySelectorAll('.poop').forEach(e=>{
-        if (bigRating > 0){
-            clone.querySelector('.poop').classList.add('filled_poop');
-            bigRating --;
-        }else{
-            clone.querySelector('.poop').classList.add('empty_poop');
-        }
-    })
 
+    //Jonas helped me to figure out how to select the right elements to show the rating 
+    clone.querySelectorAll(`.poop:nth-child(-n+${bigRating})`).forEach(e=>{
+        e.classList.add("empty_poop")
+      })
 
     document.querySelector("main").appendChild(clone);
 }

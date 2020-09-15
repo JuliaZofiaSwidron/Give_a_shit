@@ -51,10 +51,10 @@ article > h1 {
     background-repeat: no-repeat;
 }
 div.filled_poop {
-    background-image: url(http://juliazofia.com/poop_filled.svg);
+    background-image: url(http://juliazofia.com/poop_empty_1.svg);
 }
 div.empty_poop {
-    background-image: url(http://juliazofia.com/poop_empty_1.svg);
+    background-image: url(http://juliazofia.com/poop_filled.svg);
 }
 .sect_class > h3 {
     font-weight: 100;
@@ -72,7 +72,7 @@ div.empty_poop {
     box-shadow: grey 4px 5px 6px;
     border-radius: 2rem;
 }
-.readmore > p {
+.readmore > a {
     color: white;
     padding: 0.6rem;
 }
