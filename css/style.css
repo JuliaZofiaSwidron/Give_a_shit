@@ -60,30 +60,38 @@ nav {
 }
 
 
-@media all and (max-width: 699px) {
+@media all and (max-width: 799px) {
     topnav {
         grid-template-columns: 1fr 1fr;
     }
-    .right_nav{
-        display: none;
-    }
 
-    main {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+    .right_nav a {
+    padding: 1rem;
+}
 
     .logo img {
         width: 40vw;
         left: -1rem;
     }
-    nav{
-       display: block;
-    }
     body {
     overflow-x: hidden;
     }
 
+
+}
+
+@media all and (max-width: 549px) {
+    .right_nav{
+        display: none;
+    }
+    nav{
+       display: block;
+    }
+
+    body{
+        overflow-x: hidden;
+        background-image: url(/background/phone_bg.svg);
+    }
     #menuToggle {
         display: block;
         position: relative;
@@ -168,8 +176,8 @@ nav {
 
     #menu {
         position: absolute;
-        width: 10rem;
-        margin: -100px 0 0 -135px;
+        width: 35rem;
+        margin: -100px 0 0 -505px;
         padding: 30px;
         padding-top: 125px;
         font-family: var(--secondary-font);
@@ -194,4 +202,19 @@ nav {
     #menuToggle input:checked ~ ul {
         transform: none;
     }
+
 }
+
+/*
+
+--bg-color: #e1306f;
+    --link-color: #102FAD;
+    --link-hover-color: #122173;
+    --color-4: #F2B077;
+    --color-5: #F2F2F2;
+
+    --primary-font: 'Lobster Two', cursive;
+    --secondary-font: "Montserrat", serif;
+    --main-text-color: #000;
+
+    --white-space: 1.2rem;*/
