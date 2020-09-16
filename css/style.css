@@ -191,10 +191,17 @@ nav {
     height: auto;
     color: white;
 }
+
 #containerBicon{
-    margin-top: 5vh;
+    margin-top: 8vh;
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+}
+#containerBicon p {
+    color: var(--link-hover-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw
 }
 #icon1{
     grid-column-start: 2;
@@ -226,6 +233,9 @@ nav {
 
     body {
         overflow-x: hidden;
+    }
+    .exploP{
+        display: none;
     }
 
     #loca1 {
