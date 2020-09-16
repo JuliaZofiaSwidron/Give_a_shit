@@ -21,7 +21,8 @@ function createCity(city){
     clone.querySelector('article').dataset.id=city.gsx$id.$t;
     clone.querySelector("h1").textContent = city.gsx$city.$t;
     clone.querySelector('.linkCity').setAttribute('href',`${city.gsx$city.$t}.html`);
-    // clone.querySelector('')
+    clone.querySelector('.pic > img').setAttribute('src',`/images/city_images/${city.gsx$city.$t}.jpg`);
+    clone.querySelector('.pic > img').setAttribute('alt',`Photography of the city ${city.gsx$city.$t}`);
     //counting the totall rating used on a website
     let bigRating = (( Number(city.gsx$pricerating.$t) + Number(city.gsx$smellrating.$t) + Number(city.gsx$weatherrating.$t) + Number(city.gsx$availabilityrating.$t)) / 4)
     bigRating = Math.floor(bigRating);
