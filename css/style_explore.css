@@ -83,3 +83,11 @@ div.empty_poop {
     color: white;
     padding: 0.6rem;
 }
+
+@media all and (max-width: 549px){
+    .readmore{
+        width: 100%;
+        margin: -1.3rem 0 0 0 ;
+        border-radius: 0 0 15px 15px;
+    }
+}
