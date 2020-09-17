@@ -149,7 +149,7 @@
         margin: 0;
     }
 
-     h3 {
+    h3 {
         font-size: 15px;
     }
 
@@ -255,7 +255,7 @@
         font-size: 15px;
     }
 
-        .bad {
+    .bad {
         padding-left: 5vw;
     }
 
@@ -272,7 +272,6 @@
 
     .icon-description2 {
         display: flex;
-
         grid-area: ic2;
     }
 
@@ -283,11 +282,8 @@
 
     .icon-description4 {
         display: flex;
-
         grid-area: ic4;
     }
-
-
 
     .weather-p {
         grid-area: wp;
@@ -306,7 +302,7 @@
     }
 
     .rating-description p {
-        padding-right: 2rem;
+        margin-right: 2vw;
     }
 
 
@@ -315,13 +311,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            ". ic1 . . ic2 . ."
-            ". wp wp . sp sp."
-            ". ic3 . . ic4 . ."
-            ". pp pp . ap ap .";
+            ". ic1 . ic2 . . "
+            ". wp wp  sp sp."
+            ". ic3 . ic4 . . "
+            ". pp pp  ap ap .";
     }
-
-
 
 }
 
