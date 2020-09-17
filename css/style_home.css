@@ -88,7 +88,7 @@ nav {
     position: absolute;
     width: 9vw;
     height: 5vw;
-    background-image: url(/images/nametag.svg);
+    background-image: url(../images/nametag.svg);
     background-repeat: no-repeat;
     cursor: pointer;
 }
