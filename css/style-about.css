@@ -32,12 +32,21 @@
 
     .title-about {
         margin-top: 5rem;
+        margin-bottom: 0;
     }
 
     h2 {
         margin: 0;
         display: flex;
         justify-content: center;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .title-explained {
+        margin-top: 2.5rem;
     }
 
     .about-us {
@@ -54,6 +63,7 @@
         display: flex;
         justify-content: center;
     }
+
 
     .rating-text {
         display: flex;
@@ -90,16 +100,239 @@
 
 }
 
+/*BREAKING POINT*/
+
+@media only screen and (max-width: 749px) and (min-width: 600px) {
+    .about-text {
+        margin-top: 2rem;
+        grid-area: txt;
+        padding-left: 2rem;
+    }
+
+    .about-us {
+        display: grid;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "txt txt "
+            "lady lady";
+    }
+
+
+    .poop-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .poops {
+        margin-top: 5vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rating-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bad {
+        padding-left: 5vw;
+    }
+
+    .not-bad {
+        padding-right: 5vw;
+    }
+
+
+    h2 {
+        margin: 0;
+    }
+
+     h3 {
+        font-size: 15px;
+    }
+
+    .icon-description1 {
+        display: flex;
+
+        grid-area: ic1;
+    }
+
+    .icon-description2 {
+        display: flex;
+
+        grid-area: ic2;
+    }
+
+    .icon-description3 {
+        display: flex;
+        grid-area: ic3;
+    }
+
+    .icon-description4 {
+        display: flex;
+
+        grid-area: ic4;
+    }
+
+
+    .weather-p {
+        grid-area: wp;
+    }
+
+    .smell-p {
+        grid-area: sp;
+    }
+
+    .price-p {
+        grid-area: pp;
+    }
+
+    .available-p {
+        grid-area: ap;
+    }
+
+    .rating-description p {
+        padding-right: 2rem;
+    }
+
+
+    .rating-description {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            ". ic1 . . ic2 . ."
+            ". wp wp . sp sp."
+            ". ic3 . . ic4 . ."
+            ". pp pp . ap ap .";
+    }
+
+}
+
 
 /*TABLET VIEW*/
+
+
+@media only screen and (max-width: 1069px) and (min-width: 750px) {
+    .about-text {
+        margin-top: 2rem;
+        grid-area: txt;
+        padding-left: 2rem;
+    }
+
+    .about-us {
+        display: grid;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "lady txt txt txt txt"
+    }
+
+    .poop-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .poops {
+        margin-top: 3vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rating-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+        .bad {
+        padding-left: 5vw;
+    }
+
+    .not-bad {
+        padding-right: 5vw;
+    }
+
+
+    .icon-description1 {
+        display: flex;
+
+        grid-area: ic1;
+    }
+
+    .icon-description2 {
+        display: flex;
+
+        grid-area: ic2;
+    }
+
+    .icon-description3 {
+        display: flex;
+        grid-area: ic3;
+    }
+
+    .icon-description4 {
+        display: flex;
+
+        grid-area: ic4;
+    }
+
+
+
+    .weather-p {
+        grid-area: wp;
+    }
+
+    .smell-p {
+        grid-area: sp;
+    }
+
+    .price-p {
+        grid-area: pp;
+    }
+
+    .available-p {
+        grid-area: ap;
+    }
+
+    .rating-description p {
+        padding-right: 2rem;
+    }
+
+
+    .rating-description {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            ". ic1 . . ic2 . ."
+            ". wp wp . sp sp."
+            ". ic3 . . ic4 . ."
+            ". pp pp . ap ap .";
+    }
+
+
+
+}
 
 
 
 
 /*BIG SCREEN*/
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1070px) {
 
     .about-text {
+        margin-top: 2rem;
         grid-area: txt;
         padding-left: 2rem;
     }
@@ -121,6 +354,14 @@
         justify-content: center;
     }
 
+    .bad {
+        padding-left: 5vw;
+    }
+
+    .not-bad {
+        padding-right: 5vw;
+    }
+
     .rating-text {
         display: flex;
         justify-content: center;
@@ -128,6 +369,10 @@
 
     h2 {
         margin: 0;
+    }
+
+    h3 {
+        font-size: 16px;
     }
 
     .icon-description1 {
