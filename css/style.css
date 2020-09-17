@@ -51,6 +51,8 @@ p{
 }
 
 .right_nav a {
+    font-family: var(--secondary-font);
+    color: var(--link-hover-color);
     text-decoration: none;
     padding: 2rem;
 }
