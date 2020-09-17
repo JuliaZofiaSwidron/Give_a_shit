@@ -52,7 +52,8 @@
         </nav>
     </header>
     <main>
-        <section class="main_review">
+        <template id="London">
+            <section class="main_review">
             <h1>INDIA</h1>
             <div class="pic"><img></div>
             <div class="gen_rating main_rating">
@@ -70,7 +71,7 @@
         </section>
         <section class="small_review">
             <h1>When your fellow travellers give a shit</h1>
-            <article>
+            <article class="weather">
                 <div><img class="icon"src="images/weather_icon_1.svg" alt="icon of a simple cloud with raindrops pointing down">
                     <h2>WEATHER</h2>
                     <div class="category_rating  gen_rating">
@@ -84,7 +85,7 @@
                     metus purus, amet consectetur vel dictum mollis dolor. Eu dictumst lacinia morbi magnis urna
                     egestas. Sapien hac hendrerit adipiscing suscipit.</p>
             </article>
-            <article>
+            <article class="smell">
                 <div><img class="icon" src="images/smell_icon.svg" alt="icon made out of waves with flies surrounding them">
                     <h2>SMELL</h2>
                     <div class="category_rating gen_rating">
@@ -99,7 +100,7 @@
                     egestas. Sapien hac hendrerit adipiscing suscipit.</p>
 
             </article>
-            <article>
+            <article class="availability">
                 <div><img class="icon" src="images/acce.svg" alt="icon of a circle with checkmark inside">
                     <h2>AVAILABILITY</h2>
                     <div class="category_rating gen_rating">
@@ -114,7 +115,7 @@
                     metus purus, amet consectetur vel dictum mollis dolor. Eu dictumst lacinia morbi magnis urna
                     egestas. Sapien hac hendrerit adipiscing suscipit.</p>
             </article>
-            <article>
+            <article class="prices">
                 <div><img class="icon" src="images/price_icon.svg" alt="icon of stack of coins with dollar symbol on the first of them">
                     <h2>PRICES</h2>
                     <div class="category_rating gen_rating">
@@ -130,6 +131,8 @@
                     egestas. Sapien hac hendrerit adipiscing suscipit.</p>
             </article>
         </section>
+        </template>
+        
         <section class="user_review">
             <h1>SHITS LEFT BY OTHER TRAVELERS</h1>
             <article><div class="user">
@@ -179,7 +182,9 @@
             </div>
         </article>
         </section>
+        
     </main>
+    <script src="detail_page.js"></script>
 </body>
 
 </html>

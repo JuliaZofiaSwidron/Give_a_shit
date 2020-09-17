@@ -110,7 +110,7 @@ button > a {
 
     body{
         overflow-x: hidden;
-        background-image: url(/background/phone_bg.svg);
+        background-image: url(../background/phone_bg.svg);
     }
     #menuToggle {
         display: block;

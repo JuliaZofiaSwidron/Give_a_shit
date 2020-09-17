@@ -22,7 +22,8 @@ article {
 }
 .pic > img{
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
     
 }
 
@@ -76,8 +77,9 @@ div.empty_poop {
     width: 50%;
     margin-left: 55%;
     margin-top: -2rem;
-    box-shadow: grey 4px 5px 6px;
+    box-shadow:none;
     border-radius: 2rem;
+
 }
 .readmore > p {
     color: white;

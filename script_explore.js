@@ -13,16 +13,18 @@ function handleData(data){
     myData.forEach(createCity);
 }
 function createCity(city){
+    if (city.gsx$primary.$t == "1"){
     // link and clone template
     const template = document.querySelector("#City").content;
     const clone = template.cloneNode(true);
-
     //populate the copy
     clone.querySelector('article').dataset.id=city.gsx$id.$t;
     clone.querySelector("h1").textContent = city.gsx$city.$t;
-    clone.querySelector('.linkCity').setAttribute('href',`${city.gsx$city.$t}.html`);
+    clone.querySelector(".linkCity").href = `city.html?city=${city.gsx$city.$t}`;
+    // clone.querySelector('.linkCity').setAttribute('href',`${city.gsx$city.$t}.html`);
     clone.querySelector('.pic > img').setAttribute('src',`images/city_images/${city.gsx$city.$t}.jpg`);
     clone.querySelector('.pic > img').setAttribute('alt',`Photography of the city ${city.gsx$city.$t}`);
+    clone.querySelector('.sect_class > h3').textContent = (Math.floor(Math.random() * 10)) + ' reviews';
     //counting the totall rating used on a website
     let bigRating = (( Number(city.gsx$pricerating.$t) + Number(city.gsx$smellrating.$t) + Number(city.gsx$weatherrating.$t) + Number(city.gsx$availabilityrating.$t)) / 4)
     bigRating = Math.floor(bigRating);
@@ -36,4 +38,5 @@ function createCity(city){
       })
 
     document.querySelector("main").appendChild(clone);
+    }
 }
