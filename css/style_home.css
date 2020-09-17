@@ -132,6 +132,7 @@ nav {
     height: 5vw;
     padding: 0.5vw;
     cursor: pointer;
+    border: none;
 }
 /*map grey display none*/
 .mapGrey{
