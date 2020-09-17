@@ -3,14 +3,55 @@
     width: auto;
 }
 
+h3 a {
+    text-decoration: none;
+}
 
+.contact-text p {
+    font-size: 20px;
+}
+
+/*//CSS that applies to browsers that support grid*/
+@supports (display: grid) {
+
+    .instagram-images {
+        margin-top: 8vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-gap: 1rem;
+    }
+}
 
 
 /*MOBILE VIEW*/
 
 @media all and (max-width: 549px) {
 
+
+    .title-contact {
+        margin-top: 15vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-text {
+        margin: 8vw;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 10vw;
+        margin-top: 0;
+    }
+
     .hidden {
         display: none;
     }
+
+    .insta-img {
+        height: 25vw;
+        width: auto;
+    }
+
+
 }
