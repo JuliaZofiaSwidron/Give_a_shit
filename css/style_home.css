@@ -521,7 +521,7 @@ input[type="radio"]{
 
     body {
         overflow-x:hidden;
-        background-image: url(/background/phone_bg.svg);
+        background-image: url(../background/phone_bg.svg);
         z-index: -1;
     }
     .aboutP{
