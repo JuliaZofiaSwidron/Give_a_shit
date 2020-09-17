@@ -12,7 +12,7 @@ h3 a {
 
 /*MOBILE VIEW*/
 
-@media all and (max-width: 549px) {
+@media all and (max-width: 548px) {
 
     .title-contact {
         margin-top: 15vw;
@@ -26,7 +26,7 @@ h3 a {
     }
 
     .contact-text {
-        margin: 8vw;
+        margin: 6vw;
         text-align: center;
     }
 
@@ -47,10 +47,12 @@ h3 a {
             margin-top: 8vw;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            grid-gap: 1rem;
+            grid-gap: 1.3rem;
         }
     }
 }
+
+
 
 /*TABLET VIEW */
 
@@ -59,6 +61,7 @@ h3 a {
     .title-contact {
         display: flex;
         justify-content: center;
+        margin-top: 5vw;
     }
 
     h2 {
@@ -66,30 +69,30 @@ h3 a {
         margin-top: 0;
     }
 
-    .contact-text {
+    article.contact-text {
         margin: 8vw;
         text-align: center;
-    }
-
-    .hidden {
-        display: none;
+        grid-column-start: 2;
+        grid-column-end: -2;
     }
 
     .insta-img {
-        height: 10vw;
-        width: 10vw;
+        height: 20vw;
+        width: 20vw;
         cursor: pointer;
+        padding: .3rem;
     }
 
+    div.image-contact {
+        display: none;
+    }
 }
-
-
 
 
 
 /*BIG SCREEN*/
 
-@media only screen and (min-width: 548px) {
+@media only screen and (min-width: 899px) {
 
     .title-contact {
         margin: 1vw;
