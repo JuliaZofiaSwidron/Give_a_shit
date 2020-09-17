@@ -1,0 +1,16 @@
+.img-mountain {
+    height: 50%;
+    width: auto;
+}
+
+
+
+
+/*MOBILE VIEW*/
+
+@media all and (max-width: 549px) {
+
+    .hidden {
+        display: none;
+    }
+}
