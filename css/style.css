@@ -449,10 +449,12 @@ input[type="radio"]{
 /*design under 699px*/
 
 
+
 @media all and (max-width: 799px) {
     topnav {
         grid-template-columns: 1fr 1fr;
     }
+
 
 
     .right_nav a {
@@ -466,6 +468,7 @@ input[type="radio"]{
         width: 40vw;
         left: -1rem;
     }
+
 
     body {
         overflow-x: hidden;
@@ -577,6 +580,7 @@ input[type="radio"]{
         cursor: pointer;
     }
     /*burger menu design*/
+
 
     #menuToggle {
         display: block;
@@ -690,3 +694,17 @@ input[type="radio"]{
     }
 
 }
+
+/*
+..
+--bg-color: #e1306f;
+    --link-color: #102FAD;
+    --link-hover-color: #122173;
+    --color-4: #F2B077;
+    --color-5: #F2F2F2;
+
+    --primary-font: 'Lobster Two', cursive;
+    --secondary-font: "Montserrat", serif;
+    --main-text-color: #000;
+
+    --white-space: 1.2rem;*/
