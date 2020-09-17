@@ -4,7 +4,8 @@ let cityFromUrl = params.get("city");
 
 const link = "https://spreadsheets.google.com/feeds/list/12fl10SBjNqDoDrhy2nTErFCWefzyTrKXfi3rvYMO3QY/od6/public/values?alt=json";
 window.addEventListener("DOMContentLoaded", getData);
-
+const linkreview = "https://spreadsheets.google.com/feeds/list/1gbuAhrzgPJ4-rdFDy1Bvadf8dhtjd9TvpAgJLaQvzRc/od6/public/values?alt=json";
+window.addEventListener("DOMContentLoaded", getReviews);
 
 function getData(){
     fetch(link)
@@ -16,6 +17,18 @@ function handleData(data){
     console.log(myData);
     myData.forEach(showData);
 }
+function getReviews(){
+    fetch(linkreview)
+    .then(res => res.json())
+    .then(handleReviews);
+}
+function handleReviews(dataReview){
+    const myReview = dataReview.feed.entry;
+    console.log(myReview);
+    myReview.forEach(showReviews);
+}
+
+
 function showData(city){
     // link and clone template
     const template = document.querySelector(`#London`).content;
@@ -59,12 +72,22 @@ console.log(city.gsx$smellrating.$t)
 
     document.querySelector("main").prepend(clone);
     }
+}
 
-    
-    //counting the totall rating used on a website
-    
-
-    //Jonas helped me to figure out how to select the right elements to show the rating 
-    
-   
+function showReviews(review){
+    const template = document.querySelector(`#userreview`).content;
+    const clone = template.cloneNode(true);
+    if (review.gsx$city.$t === cityFromUrl){
+        clone.querySelector('.image_user > img').setAttribute('src',`images/city_images/${review.gsx$photo.$t}.jpg`);
+        clone.querySelector('.image_user > img').setAttribute('alt',`Photography of the city ${review.gsx$city.$t}`);
+        clone.querySelector('.user > h2').textContent = review.gsx$name.$t;
+        var userbigRating = (Number(review.gsx$pricerating.$t) + Number(review.gsx$smellrating.$t) + Number(review.gsx$weatherrating.$t) + Number(review.gsx$availabilityrating.$t)) / 4;
+        userbigRating = Math.floor(userbigRating);
+        console.log(userbigRating);
+        clone.querySelectorAll(`div.user_rating > .poop:nth-child(-n+${userbigRating})`).forEach(e=>{
+            e.classList.add("empty_poop")
+        })
+        clone.querySelector('.user > p').textContent = review.gsx$review.$t;
+        document.querySelector(".all_reviews").appendChild(clone);
+    }
 }

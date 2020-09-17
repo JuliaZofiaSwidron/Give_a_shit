@@ -142,7 +142,8 @@ div.empty_poop {
 
 .image_user>img {
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
 }
 
 .user>h2 {
@@ -247,7 +248,7 @@ div.empty_poop {
     main{
         margin:0 7vw;
     }
-
+    
     .main_review {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -313,7 +314,7 @@ div.empty_poop {
         align-self: center;
         margin-left: 3rem;
     }
-    .user_review > article{
+    .all_reviews{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         align-items: space-around;
